@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 16px;
+}
+
+.container {
+    background-image: url("../img/fail/login_bg.png");
+    overflow: auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.whiteHorse {
+    width: 6.75rem;
+    height: 3.93rem;
+    background-image: url("../img/fail/pic_token.png");
+    background-size: cover;
+    background-position: center;
+    margin: 1.88rem  auto 0 auto;
+}
+
+.text-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.43rem;
+}
+
+#text {
+    height: 0.85rem;
+}
+
+h3 {
+    width:8.7rem;
+    font-size:0.54rem;
+    line-height:0.54rem;
+    color: #FFFFFF;
+    display: block;
+    text-align: center;
+    margin: 0.45rem auto 0 auto;
+    font-weight:400;
+}

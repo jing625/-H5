@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+    <meta charset="UTF-8">
+    <title>白马社区-领取成功</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script>
+        var pageWidth = window.innerWidth
+        document.write('<style>html{font-size:' + pageWidth / 10 + 'px;}</style>')
+    </script>
+    <script>
+        document.write("<link rel='stylesheet' href='./css/success.css?v="+Math.random()+"'>");
+    </script>
+</head>
+<body class="container">
+<div >
+    <div class="text-wrapper">
+        <img src="./img/success/txt_suss.png" id="text">
+    </div>
+    <h3>恭喜你获得100枚白马通证</h3>
+    <div class="whiteHorse">
+    </div>
+    <div class="remind">
+        注：提现功能待app上线后方可以领取通证
+    </div>
+</div>
+<script>
+    var bmToken = getCookie('bmToken')
+    if (!bmToken) {
+        location.href = "index.html"
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+    <meta charset="UTF-8">
+    <title>登录领取白马通证</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script>
+        var pageWidth = window.innerWidth
+        document.write('<style>html{font-size:' + pageWidth / 10 + 'px;}</style>')
+    </script>
+    <script>
+        document.write("<link rel='stylesheet' href='./css/main.css?v="+Math.random()+"'>");
+    </script>
+    <script type="text/javascript" charset="utf-8" src="//g.alicdn.com/sd/nch5/index.js?t=2015052012"></script>
+    <style>
+        ._nc .stage {
+            padding: 0;
+        }
+
+        ._nc .stage1 .slider {
+
+            left: 0;
+            right: 0;
+        }
+    </style>
+    <script src="../vendors/jquery.min.js"></script>
+</head>
+<body class="container">
+<div>
+    <div class="title">登录/注册</div>
+    <form action="">
+        <main>
+
+            <div class="phone">
+                <h3>手机号码</h3>
+                <div class="input-wrapper" id="input-wrapper">
+                    <input name='phoneNumber' autofocus type="number" id="phoneNumber" required
+                           oninput="if(value.length>11)value=value.slice(0,11)" placeholder="请输入手机号码"
+                           autocomplete="off">
+                    <img src="./img/login/close_hint.png" id="clear">
+                </div>
+            </div>
+            <div id="__nc" style="display: flex; justify-content: center; margin-bottom: 0.5rem; margin-top: 0.53rem;">
+                <div id="nc" style="width: 100%"></div>
+            </div>
+            <div class="captcha-wrapper">
+                <h3>验证码</h3>
+                <div class="input-wrapper">
+                    <input name='captcha' type="number" id="captcha" oninput="if(value.length>6)value=value.slice(0,6)"
+                           placeholder="请输入验证码" autocomplete="off" required>
+                    <span class="line"></span>
+                    <button type="button" id="getCaptchaButton">获取验证码</button>
+                </div>
+            </div>
+            <button type="submit" id="submitButton">注册并领取白马通证</button>
+        </main>
+    </form>
+</div>
+
+<script>
+    document.write("<script type='text/javascript' src='./js/main.js?v="+Math.random()+"'><\/script>");
+</script>
+<script>
+    var aliyunCaptchaResult = null
+    var nc_token = ["FFFF0N00000000006E34", (new Date()).getTime(), Math.random()].join(':');
+    var nc = NoCaptcha.init({
+        renderTo: '#nc',
+        appkey: 'FFFF0N00000000006E34',
+        scene: 'nc_register_h5',
+        token: nc_token,
+        trans: {"key1": "code200"},
+        elementID: ["usernameID"],
+        is_Opt: 0,
+        language: "cn",
+        timeout: 10000,
+        retryTimes: 5,
+        errorTimes: 5,
+        inline: false,
+        apimap: {
+            // 'analyze': '//a.com/nocaptcha/analyze.jsonp',
+            // 'uab_Url': '//aeu.alicdn.com/js/uac/909.js',
+        },
+        bannerHidden: false,
+        initHidden: false,
+        callback: function (data) {
+//                window.console && console.log(nc_token)
+//                window.console && console.log(data.csessionid)
+//                window.console && console.log(data.sig)
+
+            aliyunCaptchaResult = data
+            var phoneNumber = $('input[name=phoneNumber]').val();
+            if (phoneNumber && phoneNumber.length === 11) {
+                getCaptcha()
+            }
+
+        },
+        error: function (s) {
+        }
+    });
+    NoCaptcha.setEnabled(true);
+    nc.reset();//请务必确保这里调用一次reset()方法
+
+    NoCaptcha.upLang('cn', {
+        'LOADING': "加载中...",//加载
+        'SLIDER_LABEL': "请向右滑动验证",//等待滑动
+        'CHECK_Y': "验证通过",//通过
+        'ERROR_TITLE': "非常抱歉，这出错了...",//拦截
+        'CHECK_N': "验证未通过", //准备唤醒二次验证
+        'OVERLAY_INFORM': "经检测你当前操作环境存在风险，请输入验证码",//二次验证
+        'TIPS_TITLE': "验证码错误，请重新输入"//验证码输错时的提示
+    });
+</script>
+
+
+</body>
+</html>

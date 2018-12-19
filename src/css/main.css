@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 16px;
+}
+
+input, button {
+    border: none;
+}
+
+button {
+    outline: none;
+}
+
+input:focus {
+    border-bottom: 1px solid #0155FF !important;
+}
+
+input::placeholder{
+    color: #C6C6C6;
+    font-size:0.43rem;
+    font-family:PingFang-SC-Regular;
+    font-weight:400;
+}
+
+.container {
+    background-image: url("../img/login/login_bg.png") ;
+    overflow: auto;
+    background-position: 50% 50%;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    background-size:  cover;
+}
+
+.title {
+    font-size: 0.53rem;
+    font-family: PingFang-SC-Bold;
+    font-weight: bold;
+    line-height: 0.53rem;
+    margin: 1.73rem 0 0 0.56rem;
+    color: #ffffff;
+}
+
+main {
+    width: 8.03rem;
+    margin: 2.31rem auto 0 auto;
+}
+
+main > div > h3 {
+    font-size: 0.32rem;
+    font-family: PingFang-SC-Medium;
+    font-weight: 500;
+    line-height: 0.32rem;
+    color: #FFFFFF;
+}
+
+main > div > .input-wrapper {
+    margin-top: 0.16rem;
+    position: relative;
+}
+
+main > div > .input-wrapper > input {
+    color: #FFFFFF;
+    font-size: 0.43rem;
+    font-family: PingFang-SC-Bold;
+    font-weight: bold;
+    line-height: 0.43rem;
+    height: 1.24rem;
+    border-bottom: 1px solid #E4E5EA;
+    background: none;
+    outline: none;
+    /*padding: 0.1rem 0;*/
+    width: 100%;
+    border-radius: 0;
+}
+
+main > div > .input-wrapper > .line{
+   width: 1px;
+    height: 0.27rem;
+    border-right:1px solid #EAEAEA;
+    position: absolute;
+    top: 0.48rem;
+    right: 2.4rem;
+}
+
+main > div > .input-wrapper > img {
+    width: 0.4rem;
+    position: absolute;
+    top: 0.42rem;
+    right: 0.11rem;
+
+}
+
+main > div > .input-wrapper > button {
+    font-size: 0.37rem;
+    font-family: PingFang-SC-Regular;
+    line-height: 0.37rem;
+    text-align: center;
+    width: 2.0rem;
+    top: 0.42rem;
+    right: 0.11rem;
+    position: absolute;
+    background: none;
+    color: #ffffff;
+}
+
+main > .captcha-wrapper {
+    margin-top: 0.4rem;
+}
+
+main > button {
+    background: #0155FF;
+    width: 100%;
+    height: 1.2rem;
+    font-size: 0.48rem;
+    font-family: PingFang-SC-Medium;
+    font-weight: 500;
+    color: #ffffff;
+    border-radius: 1rem;
+    margin-top: 1.33rem;
+}
+
+#__nc{
+    margin-bottom: 0.5rem;
+    margin-top: 0.53rem;
+    /*height: 1.07rem;*/
+}
+
+._nc .stage1 .slider{
+    /*height: 1.73rem!important;*/
+}
+
+._nc .stage1 .button{
+    /*height: 1.73rem!important;*/
+}
